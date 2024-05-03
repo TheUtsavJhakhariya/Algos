@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    background: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+#cursor {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: fixed; /* Change position to fixed */
+  pointer-events: none;
+  mix-blend-mode: difference;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+
+.content h1{
+  text-align: center;
+  color: #006aff;
+  font-size: 3em;
+  width: 100%;
+  font-weight: 500;
+}
+.content{
+  width: 80%;
+  margin: 5%;
+}
+.content .cat{
+  width: 100%;
+  padding-bottom: 1em;
+}
+.content ul li{
+  list-style: none;
+}
+.content h2{
+  line-height: 15px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+}
+.content p{
+  color: rgb(255, 255, 255);
+  margin-left: 100px;
+  font-size: 25px;
+  font-weight: 200;
+}
+.content .item{
+  line-height: 5px;
+}
+.content .item a{
+  color: #777777;
+  text-decoration: none;
+  text-align: left;
+  font-weight: 700;
+}
+.content .item a:hover{
+  color: #bbbbbb;
+  transform: scale(1.1);
+  text-decoration: none;
+  text-align: left;
+  font-weight: 700;
+}
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 20vh;
+    max-width: 80%;
+    font-style: italic;
+    font-size: 50px;
+}
+
+.heading{
+  font-size: 4.5rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.para{
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.accordion li h2 {
+    margin-left: 20%;
+    color: rgb(255, 255, 255);
+  }
+
+  .accordion li p{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 25%;
+  }
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    max-width: 100%;
+  }
+
+  h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+    max-width: 90%;
+  }
+
+  .content h1{
+    font-size: 40px;
+    color: #006aff;
+  }
+
+  .content p {
+    font-size: 25px;
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+  }
+
+  .content .cat {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+
+  .accordion li h2 {
+    font-size: 15px;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+  }
+
+  .accordion li p{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    margin-left: 30px;
+  }
+  .copyright{
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    max-width: 100%;
+  }
+
+  h1{
+    color: white;
+    text-align: center;
+    margin: 20px;
+    max-width: 90%;
+
+  }
+
+  .content h1{
+    font-size: 30px;
+    color: #006aff;
+  }
+
+  .content p {
+    font-size: 15px;
+    margin-left: 10px;
+    color: white;
+  }
+
+  .content .cat {
+    font-size: 1.1rem;
+    margin-top: -20px;
+  }
+
+  .accordion li h2 {
+    font-size: 15px;
+    margin-left: -40px;
+    color: white;
+  }
+
+  .accordion li p{
+    color: white;
+    margin: 10px;
+  }
+}
+
+/* Mobile Screens (portrait) */
+@media only screen and (max-width: 480px) {
+  .content {
+    max-width: 100%;
+  }
+
+  h1{
+    color: white;
+    text-align: center;
+    margin: 20px;
+    max-width: 90%;
+
+  }
+
+  .content h1{
+    font-size: 30px;
+    color: #006aff;
+  }
+
+  .content p {
+    font-size: 15px;
+    margin-left: 10px;
+    color: white;
+  }
+
+  .content .cat {
+    font-size: 1.1rem;
+    margin-top: -20px;
+  }
+
+  .accordion li h2 {
+    font-size: 15px;
+    margin-left: -40px;
+    color: white;
+  }
+
+  .accordion li p{
+    color: white;
+    margin: 10px;
+  }
+
+}
+
+.copyright {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.name h1{
+  color: #ffffff50;
+  font-size: 150px;
+  font-weight: 200;
+  margin-bottom: -50px;
+  text-align: center;
+}
+
+.name h2{
+  color: #ffffff;
+  font-size: 50px;
+  margin-left: 50px;
+  text-decoration:wavy;
+  margin-top: -100px;
+  text-align: center;
+}
+
+/* Styles for the progress bar */
+.progress-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000;
+  z-index: 9999; /* Ensure it stays on top of other elements */
+}
+
+.progress-bar {
+  height: 4px;
+  background: linear-gradient(to right, black, rgb(0, 102, 255));
+}
+
+
+    </style>
+    <title>Algorithms</title>
+    
+</head>
+<body>
+    <div id="cursor"></div>
+<br>
+<h1>Algorithms That Programmers Should Know</h1>
+<div class="progress-container">
+  <div class="progress-bar" id="myBar"></div>
+</div>
+
+<div class="content">
+
+  <div class="name">
+    <h1>01</h1>
+    <h2>01</h2>
+  </div>
+
+
+  <h1 class="heading">Binary Search Algorithm</h1>
+  <p class="para">
+    Binary search works by repeatedly dividing the sorted array in half and checking if the target element lies in the left or right half. It keeps discarding the half where the target cannot lie until it finds the element or determines it's not present.</p>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p><a href="https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/pc/challenge-binary-search">Khan Academy</a>
+          <br><a href="https://www.geeksforgeeks.org/binary-search/">GeeksforGeeks</a>
+          <br><a href="https://leetcode.com/problems/binary-search/">LeetCode</a>
+          <br><a href="https://www.youtube.com/watch?v=P3YID7liBug">freeCodeCamp.org</a>
+          <br><a href="https://www.youtube.com/watch?v=P3YID7liBug">The Cherno</a></p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Complexity Analysis</h2>
+        <p class="item"><a href="#">Time Complexity</a></p>
+        <div>
+          <p>
+            Binary search is like splitting a phonebook in half to find a name. You start in the middle, check if the name you want is before or after, then repeat the process with the half where it could be. This clever strategy means it takes just a few steps to find something, even in a massive phonebook, making it way faster than checking every name one by one.
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Space Complexity</a></p>
+      <div>
+        <p>Binary search doesn't need much space to work. It's like having a small notebook where you write down a few things as you search. No matter how big the phonebook is, you only need that one little notebook. So, it doesn't matter if you're searching through a tiny or giant phonebook—it's always the same amount of extra stuff you need.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+
+
+  <div class="name">
+    <h1>02</h1>
+    <h2>02</h2>
+  </div>
+
+
+  <h1 class="heading">Breadth First Search (BFS) Algorithm  </h1>
+  <p class="para">
+    Breadth First Search (BFS) is a graph traversal algorithm that explores all nodes at the current depth level before moving on to deeper levels. It's useful for finding the shortest path in unweighted graphs and is commonly used in network routing and puzzle solving.
+  </p>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p><a href="https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/breadth-first-search-and-its-uses">Khan Academy</a> - Interactive exercises and visualizations to grasp BFS concepts
+          <br><a href="https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/">GeeksforGeeks</a> - Detailed explanation, code examples in various languages, and complexity analysis
+          <br><a href="https://visualgo.net/en/dfsbfs/print">Visualgo</a> - Interactive animation to visualize the BFS process
+          <br><a href="https://www.youtube.com/watch?v=oDqjPvD54Ss">The Coding Train</a> - Engaging video explanation with clear visualizations
+          <a href="https://m.youtube.com/watch?v=7Cox-J7onXw">freeCodeCamp.org</a> - Concise and practical explanation</p>
+        </div>
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How BFS Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            BFS explores a graph in a level-by-level fashion. It starts by visiting all the neighbors of the starting node, then all the neighbors of those neighbors, and so on, until all reachable nodes have been explored.
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Data Structure</a></p>
+      <div>
+        <p>BFS typically uses a queue data structure to keep track of the nodes to be explored. Nodes are added to the back of the queue and processed in a First-In-First-Out (FIFO) manner.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+
+
+
+  <div class="name">
+    <h1>03</h1>
+    <h2>03</h2>
+  </div>
+
+
+  <h1 class="heading">Depth First Search (DFS) Algorithm</h1>
+  <p class="para">
+    Depth First Search (DFS) is a graph traversal algorithm that explores as far as possible along each branch before backtracking. It starts at the root node and explores as deep as possible along each branch before backtracking. DFS is often used in maze solving, topological sorting, and finding connected components in graphs.</p>
+
+    <div class="cat">
+      <ul class="accordion">
+      <li>
+        <h2>Where to Learn</h2>
+          <p class="item"><a href="#">Online Resources</a></p>
+          <div>
+            <p>
+              <a href="https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/breadth-first-search-and-its-uses">Khan Academy</a> - Interactive exercises and visualizations to grasp BFS concepts
+              <br>
+              <a href="https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/">GeeksforGeeks</a> - Detailed explanation, code examples in various languages, and complexity analysis
+              <br>
+              <a href="https://visualgo.net/en/dfsbfs/print">Visualgo</a> - Interactive animation to visualize the BFS process
+              <br>
+              <a href="https://www.youtube.com/watch?v=oDqjPvD54Ss">The Coding Train</a> - Engaging video explanation with clear visualizations
+              <br>
+              <a href="https://m.youtube.com/watch?v=7Cox-J7onXw">freeCodeCamp.org</a> - Concise and practical explanation
+            </p>
+          </div>
+          
+          
+          
+      </li>
+      <li>
+        <p class="item"><a href="#">Interactive Courses</a></p>
+        <div>
+          <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+        </div>
+      </li>
+    </ul>
+  
+    </div>
+    <div class="cat">
+      <ul class="accordion">
+      <li>
+        <h2>How DFS Works</h2>
+          <p class="item"><a href="#">Core Principle</a></p>
+          <div>
+            <p>
+              DFS explores a graph in a depth-first manner. It starts at a node and explores as far as possible along a chosen path, backtracking and exploring other branches when it reaches a dead end (unvisited neighbor with no unexplored paths).</p>
+          </div>
+          
+      </li>
+      <li>
+        <p class="item"><a href="#">Data Structure</a></p>
+        <div>
+          <p>DFS typically uses a stack data structure to keep track of the nodes to be explored. Nodes are pushed onto the stack and explored in a Last-In-First-Out (LIFO) manner. This ensures that DFS explores a single path deeply before moving on to other branches.</div>
+      </li>
+    </ul>
+  
+    </div>
+
+
+
+  <div class="name">
+    <h1>04</h1>
+    <h2>04</h2>
+  </div>
+
+
+  <h1 class="heading">Merge Sort Algorithm</h1>
+  <p class="para">
+    Merge Sort is a divide-and-conquer algorithm that divides the unsorted list into sublists until each sublist contains only one element. It then repeatedly merges sublists to produce sorted sublists until there is only one sublist remaining. Merge Sort guarantees a time complexity of O(n log n), making it efficient for sorting large datasets.</p>
+
+    <div class="cat">
+      <ul class="accordion">
+      <li>
+        <h2>Where to Learn</h2>
+          <p class="item"><a href="#">Online Resources</a></p>
+          <div>
+            <p>
+              <a href="https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/breadth-first-search-and-its-uses">Khan Academy</a> - Interactive exercises and visualizations to grasp BFS concepts
+              <br>
+              <a href="https://www.geeksforgeeks.org/merge-sort/">GeeksforGeeks</a> - Detailed explanation, code examples in various languages, and complexity analysis
+              <br>
+              <a href="https://visualgo.net/en/dfsbfs/print">Visualgo</a> - Interactive animation to visualize the BFS process
+              <br>
+              <a href="https://www.youtube.com/watch?v=oDqjPvD54Ss">The Coding Train</a> - Engaging video explanation with clear visualizations
+              <br>
+              <a href="https://m.youtube.com/watch?v=7Cox-J7onXw">freeCodeCamp.org</a> - Concise and practical explanation
+            </p>
+          </div>
+          
+          
+          
+      </li>
+      <li>
+        <p class="item"><a href="#">Interactive Courses</a></p>
+        <div>
+          <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+        </div>
+      </li>
+    </ul>
+  
+    </div>
+    <div class="cat">
+      <ul class="accordion">
+      <li>
+        <h2>How MSA Works</h2>
+          <p class="item"><a href="#">Core Principle</a></p>
+          <div>
+            <p>
+              Merge Sort is a divide-and-conquer sorting algorithm. It works by recursively dividing the unsorted list into sub-lists containing a single element (which are inherently sorted). Then, it repeatedly merges adjacent sub-lists to produce new sorted sub-lists until the entire list is merged into a single sorted list.</p>
+          </div>
+          
+      </li>
+      <li>
+        <p class="item"><a href="#">Steps Involved</a></p>
+        <div>
+          <p>Divide: Recursively divide the unsorted list into sub-lists containing a single element each.<br>
+            Conquer: Sort the individual sub-lists (these sub-lists of size 1 are already sorted).<br>
+            Merge: Merge the sorted sub-lists back together in a way that preserves the sorted order. This merging process continues until the entire list is sorted.</p></div>
+      </li>
+    </ul>
+  
+    </div>
+
+
+
+  <div class="name">
+    <h1>05</h1>
+    <h2>05</h2>
+  </div>
+
+
+  <h1 class="heading">Quicksort Algorithm
+  </h1>
+  <p class="para">
+    Quicksort is a sorting algorithm that works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. It then recursively sorts the sub-arrays. Quicksort is highly efficient and typically faster than other sorting algorithms like Merge Sort and Heap Sort.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/sort">Mozilla Developer Network (MDN)</a> - Explanation and code examples
+            <br>
+            <a href="https://www.geeksforgeeks.org/quick-sort/">GeeksforGeeks</a> - Detailed explanation, code examples in various languages, and complexity analysis
+            <br>
+            <a href="https://www.youtube.com/c/csdojo">CS Dojo</a> - Interactive animation to visualize the Quicksort process
+            <br>
+            <a href="https://www.youtube.com/watch?v=8hEyhs3OV1w">The Coding Train</a> - Engaging video explanation with clear visualizations
+            <br>
+            <a href="https://m.youtube.com/watch?v=P6XGSKO2RzI">freeCodeCamp.org</a> - Concise and practical explanation
+          </p>
+        </div>
+        
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How QSA Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Quicksort is a divide-and-conquer sorting algorithm that relies on a partitioning strategy. It selects a pivot element from the list and rearranges the elements such that all elements smaller than the pivot are placed before it, and all elements greater than the pivot are placed after it. The sub-lists on either side of the pivot are then sorted recursively, resulting in a sorted entire list.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+        <p>Choose a pivot: Select a pivot element from the list (different strategies can be used for pivot selection).<br>
+          Partition: Rearrange the list elements such that elements less than the pivot are placed to its left and elements greater than the pivot are placed to its right.<br>
+          Recursively Sort: Recursively sort the sub-lists on either side of the pivot</p></div>
+    </li>
+  </ul>
+
+  </div>
+
+
+  <div class="name">
+    <h1>06</h1>
+    <h2>06</h2>
+  </div>
+
+
+  <h1 class="heading">Kruskals Algorithm
+  </h1>
+  <p class="para">
+    Kruskal's Algorithm is a greedy algorithm used for finding the minimum spanning tree (MST) of a connected, weighted graph. It works by sorting the edges of the graph by weight and then adding them to the MST in ascending order while avoiding creating cycles. Kruskal's Algorithm is efficient and commonly used in various applications such as network design, clustering, and optimization problems.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm">Wikipedia</a> - Formal definition and properties
+            <br>
+            <a href="https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1">GeeksforGeeks</a> - Detailed explanation, code examples, and complexity analysis
+            <br>
+            <a href="https://www.youtube.com/watch?v=mN__iQ2zfjs">Visualgo</a> - Interactive animation to visualize Kruskal's process
+            <br>
+            <a href="https://www.youtube.com/watch?v=5xosHRdxqHA">The Coding Train</a> - Engaging video explanation with clear visualizations
+            <br>
+            <a href="https://www.youtube.com/watch?v=5xosHRdxqHA">freeCodeCamp.org</a> - Concise and practical explanation
+          </p>
+        </div>
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Kruskal's Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Kruskal's Algorithm finds a minimum spanning tree (MST) for a weighted, connected, undirected graph. An MST is a subset of the graph's edges that connects all its vertices with the least possible total edge weight. It ensures that there are no cycles and covers every vertex in the graph.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+        <p>To construct a minimum spanning tree (MST) from a graph, start by sorting all edges by weight. Initialize a forest where each vertex is a single-vertex tree. Iterate through the sorted edges, adding an edge to the MST if it connects vertices from different trees, merging the trees. Discard edges that would create cycles. Repeat until all vertices are connected in a single tree, forming the MST.</p></div>
+    </li>
+  </ul>
+
+  </div>
+
+
+  <div class="name">
+    <h1>07</h1>
+    <h2>07</h2>
+  </div>
+
+
+  <h1 class="heading">Floyd Warshall Algorithm
+  </h1>
+  <p class="para">
+    The Floyd Warshall Algorithm finds the shortest paths between all pairs of vertices in a weighted graph. It considers all possible paths and gradually updates the shortest path distances. It's versatile, working with positive and negative edge weights, and is efficient for dense graphs. This algorithm is widely used in network routing and traffic optimization.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Floyd-Warshall_algorithm">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://www.programiz.com/dsa/floyd-warshall-algorithm">Programiz</a> - Clear explanation, code examples, and complexity analysis
+            <br>
+            <a href="https://www.youtube.com/c/csdojo">CS Dojo</a> - You can find videos explaining Floyd-Warshall's algorithm here
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Floyd-Warshall Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Floyd-Warshall Algorithm efficiently finds the shortest paths between all pairs of vertices in a weighted graph, even with negative edge weights (unlike Dijkstra's algorithm). It achieves this through a dynamic programming approach.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+        <p>To initialize, create a distance matrix D where each entry D[i][j] holds the shortest known distance between vertex i and vertex j, initially filled with edge weights (infinity for non-existent edges). Then, iteratively update distances by considering intermediate vertices k, checking if a path through k offers a shorter distance between vertices i and j, and updating D[i][j] accordingly. Repeat for a fixed number of iterations equal to the number of vertices in the graph.</p></div>
+    </li>
+  </ul>
+
+  </div>
+ 
+
+  <div class="name">
+    <h1>08</h1>
+    <h2>08</h2>
+  </div>
+
+
+  <h1 class="heading">Dijkstra’s Algorithm
+  </h1>
+  <p class="para">
+    Dijkstra's Algorithm is a greedy algorithm used for finding the shortest path from a single source vertex to all other vertices in a weighted graph. It works by iteratively selecting the vertex with the smallest tentative distance from the source and updating the distances of its neighboring vertices. Dijkstra's Algorithm guarantees finding the shortest path in non-negative weighted graphs and is commonly used in network routing and pathfinding applications.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://www.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/a/route-finding">Khan Academy</a> - Interactive exercises and visualizations
+            <br>
+            <a href="https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1">GeeksforGeeks</a> - Detailed explanation, code examples
+            <br>
+            <a href="https://visualgo.net/en/sssp">Visualgo</a> - Interactive animation
+            <br>
+            The Coding Train: (Engaging video explanation) <a href="https://www.youtube.com/watch?v=aKYlikFAV4k">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=_lHSawdgXpI">YouTube</a>
+          </p>
+        </div>
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Dijkstra's Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Dijkstra's Algorithm efficiently finds the shortest paths from a single source vertex to all other vertices in a weighted, non-negative graph. It prioritizes exploring paths with the least cumulative weight encountered so far.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+        <p>In essence, the algorithm maintains a set of visited nodes and a distance array. It iteratively selects the unvisited node with the minimum distance from the source, marks it as visited, and updates distances to its unvisited neighbors if a shorter path is found through the current node. This process continues until all nodes are visited, resulting in the shortest distances from the source to all other reachable vertices.</p></div>
+    </li>
+  </ul>
+
+  </div>
+
+
+
+
+  
+  <div class="name">
+    <h1>09</h1>
+    <h2>09</h2>
+  </div>
+
+  <h1 class="heading">Bellman Ford Algorithm
+  </h1>
+  <p class="para">
+    Bellman-Ford Algorithm is a dynamic programming-based algorithm used to find the shortest paths from a single source vertex to all other vertices in a weighted graph, including graphs with negative edge weights. It iteratively relaxes edges, gradually improving the shortest path estimates until convergence. Bellman-Ford can detect negative cycles and is widely used in network routing protocols and pathfinding applications.
+  </p>
+
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/sort">Mozilla Developer Network (MDN)</a> - Explanation related to sorting algorithms, but applicable to Bellman-Ford for understanding its time complexity
+            <br>
+            GeeksforGeeks: (Detailed explanation, code examples) [invalid URL removed]
+            <br>
+            <a href="https://www.youtube.com/c/csdojo">CS Dojo</a> - You can find videos explaining Bellman-Ford's algorithm here
+          </p>
+        </div>
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Bellman-Ford Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Bellman-Ford is a single-source shortest path algorithm that works for weighted graphs, even those with negative edge weights (unlike Dijkstra's algorithm). It tackles this by iteratively relaxing edges, ensuring no shorter paths are missed.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+        <p>The algorithm works in rounds, relaxing each edge in the graph a specific number of times (equal to the number of vertices). In each relaxation step, it checks if a shorter path exists by going through a particular vertex. This process guarantees finding the shortest paths if no negative-weight cycles are present.
+
+          pen_spark
+           If a negative-weight cycle exists, the algorithm detects it.</p></div>
+    </li>
+  </ul>
+
+  </div>
+
+
+
+
+
+<div class="name">
+  <h1>10</h1>
+  <h2>10</h2>
+</div>
+
+  <h1 class="heading">Kadane’s Algorithm
+  </h1>
+  <p class="para">
+    Kadane's Algorithm is a dynamic programming algorithm used to find the maximum sum subarray within a given array of integers. It works by iteratively updating the maximum subarray sum by considering the current element and the previously computed maximum sum. Kadane's Algorithm efficiently handles both positive and negative numbers and is widely used in various applications such as data analysis, image processing, and financial modeling.
+  </p>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/sort">Mozilla Developer Network (MDN)</a> - Explanation related to sorting algorithms, but applicable to Bellman-Ford for understanding its time complexity
+            <br>
+            <a href="https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/">GeeksforGeeks</a> - Explanation related to sorting algorithms, but applicable to Bellman-Ford for understanding its time complexity
+            <br>
+            <a href="https://www.youtube.com/c/csdojo">CS Dojo</a> - You can find videos explaining Bellman-Ford's algorithm here
+          </p>
+        </div>
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Kadane's Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Kadane's Algorithm efficiently finds the maximum sum contiguous subarray within a given array of numbers. It works by iterating through the array and keeping track of two key variables:</p>
+            <p>Current Subarray Sum (max_ending_here): This variable stores the maximum sum of a subarray ending at the current element.<br>
+              Maximum Subarray Sum So Far (max_so_far): This variable keeps track of the overall maximum subarray sum encountered so far.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+        <p>At each step, the algorithm considers the current element and the current subarray sum. It updates the current subarray sum by either taking the element itself (if negative) or adding it to the previous subarray sum (if positive). The maximum subarray sum so far is then updated if the current subarray sum is greater. This process ensures finding the subarray with the maximum possible sum.</p></div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>11</h1>
+    <h2>11</h2>
+  </div>
+  <h1 class="heading">Lee Algorithm
+  </h1>
+  <p class="para">
+    The Lee Algorithm, also known as the Breadth First Search (BFS) Maze Solving Algorithm, is used to find the shortest path from a given starting point to a destination in a maze or grid. It operates by systematically exploring the maze in a breadth-first manner, moving outward from the starting point and marking each cell with the number of steps required to reach it. The Lee Algorithm is efficient and commonly used in maze solving, pathfinding, and robotic navigation.
+  </p>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            GeeksforGeeks: While Lee Algorithm isn't directly covered for shortest paths, A* search shares similar pathfinding concepts<br>
+            <a href="https://www.codesdope.com/blog/article/lee-algorithm/">CodeDope</a>
+          </p>
+        </div>
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Lee Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Lee Algorithm is a pathfinding technique often used in maze routing problems. It finds the shortest path from a starting point to an end point within a grid-based maze. The algorithm works based on a breadth-first search (BFS) approach.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+      <p>Start with the source point: The algorithm begins by placing the starting point in a queue.<br>
+        Iterative Exploration: It iteratively removes a cell from the queue and explores its four unvisited neighbors (up, down, left, right).<br>
+        Marking and Enqueuing: If a neighbor is a valid path (not a wall), it's marked as visited and added to the queue for further exploration. The distance from the source point is also assigned to the neighbor.<br>
+        Repeat until destination is reached: This exploration process continues until the destination point is removed from the queue. The recorded distances then indicate the shortest path from the starting point to the end point.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>12</h1>
+    <h2>12</h2>
+  </div>
+  
+  <h1 class="heading">Flood Fill Algorithm
+  </h1>
+  <p class="para">
+    The Flood Fill Algorithm is a technique used to determine and update the connected regions of an image or a grid. It starts from a given point and spreads outwards, "filling" adjacent pixels with a specific color or value until all connected pixels have been visited. This algorithm is commonly used in image processing tasks such as coloring, flood filling, and region labeling.
+  </p>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Flood_fill">Wikipedia</a> - Formal definition and properties
+            <br>
+            Baeldung: (Detailed explanation with code examples) <a href="https://www.reddit.com/r/java/comments/9kg5jx/disappointed_review_about_baeldungs_299_course/">Reddit</a>
+            <br>
+            <a href="https://m.youtube.com/watch?v=QlcwfGo8W_E">CS Dojo</a> - Interactive animation to visualize Flood Fill
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://www.youtube.com/watch?v=TClRuEZ-uDg">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=RwozX--B_Xs">YouTube</a>
+          </p>
+        </div>
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Flood Fill Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Flood Fill replaces a target color with a replacement color in a connected area, starting from a seed point. It explores neighboring pixels/nodes recursively or iteratively, replacing the target color with the new color and continuing until all connected pixels/nodes with the target color are filled.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Applications</a></p>
+      <div>
+      <p>Flood Fill is used in various applications like:<br>
+
+        Paint tools for digital art and image editing<br>
+        Filling closed shapes in games<br>
+        Identifying connected components in graphs</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>13</h1>
+    <h2>13</h2>
+  </div>
+
+  <h1 class="heading">Floyd’s Cycle Detection Algorithm
+  </h1>
+  <p class="para">
+    Floyd’s Cycle Detection Algorithm, or the "Tortoise and Hare" algorithm, is used to detect cycles in a linked list. It involves two pointers—one advancing at twice the speed of the other—to detect a cycle if they meet at the same node. This algorithm is efficient, with a time complexity of O(n), making it commonly used in cycle detection tasks within linked lists and graphs.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Cycle_detection">Wikipedia</a> - Explanation within the Cycle Detection section
+            <br>
+            <a href="https://www.youtube.com/c/csdojo">CS Dojo</a> - You can find videos explaining Floyd's Cycle Detection Algorithm here
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Floyd’s Cycle Detection Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Floyd's Cycle Detection Algorithm, also known as the Tortoise and Hare Algorithm, efficiently determines if a cycle exists in a linked list. It uses two pointers, a slow pointer (often called the tortoise) and a fast pointer (often called the hare), that traverse the linked list at different speeds.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+      <p>Initialization: Begin with both pointers (slow and fast) at the head of the linked list.  <br>
+        Iterative Movement: In each iteration, advance the slow pointer by one node and the fast pointer by two nodes if possible.  <br>
+        Cycle Detection: If the fast pointer meets the slow pointer, a cycle exists; otherwise, if the fast pointer reaches the end of the list, there's no cycle.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>14</h1>
+    <h2>14</h2>
+  </div>
+  <h1 class="heading">Union Find Algorithm
+  </h1>
+  <p class="para">
+    The Union-Find Algorithm, also known as the Disjoint-Set Data Structure, is used to maintain a collection of disjoint sets and perform operations like union and find efficiently. It consists of two main operations: union, which merges two sets into one, and find, which determines the representative element of a set. This algorithm is commonly used in various applications such as Kruskal's minimum spanning tree algorithm and cycle detection in graphs.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Disjoint-set_data_structure">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://www.geeksforgeeks.org/union-find-algorithm-union-rank-find-optimized-path-compression/">GeeksforGeeks</a> - Detailed explanation, code examples
+            <br>
+            <a href="https://www.youtube.com/c/csdojo">CS Dojo</a> - You can find videos explaining Union-Find Algorithm here
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://www.youtube.com/watch?v=0jNmHPfA_yE">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://www.youtube.com/watch?v=0jNmHPfA_yE">YouTube</a>
+          </p>
+        </div>
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Union Find Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            The Union-Find Algorithm, also known as the Disjoint-Set Data Structure, manages a collection of disjoint sets (non-overlapping groups). It efficiently performs two main operations:
+<br>
+Union (Merge): This operation combines two sets into a single set. The algorithm efficiently merges the smaller tree (based on a certain criterion) into the larger tree to maintain efficiency.<br>
+Find (Root): This operation determines which set a particular element belongs to by finding the root element of the tree that element resides in.</p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Steps Involved</a></p>
+      <div>
+      <p>Each element belongs to a set represented by a tree structure, where each node points to its parent (except the root, which has no parent).<br>
+        The Union operation finds the root nodes of the two sets to be merged.<br>
+        It then connects one tree's root to the other tree's root (usually the shallower tree's root is attached to the deeper tree's root).<br>
+        The Find operation recursively follows parent pointers until it reaches the root node, which identifies the set an element belongs to.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>15</h1>
+    <h2>15</h2>
+  </div>
+  <h1 class="heading">Topological Sort Algorithm
+  </h1>
+  <p class="para">
+    Topological Sort Algorithm arranges vertices of a directed graph linearly, respecting the direction of edges. It selects vertices with no incoming edges iteratively until all vertices are ordered. This sorting technique is crucial in scheduling tasks with dependencies, ensuring proper execution order in project planning and job scheduling.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Topological_sorting">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://practice.geeksforgeeks.org/problems/topological-sort/1">GeeksforGeeks</a> - Clear explanation, code examples
+            <br>
+            <a href="https://medium.com/nerd-for-tech/topological-sorting-for-interviews-f8213ef1c3bb">Interview Cake</a> - Focuses on intuition and applications
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://m.youtube.com/watch?v=eL-KzMXSXXI">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=GYmq98CVm2c">YouTube</a>
+          </p>
+        </div>
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Union Find Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            Topological Sort arranges a directed acyclic graph (DAG) into a linear order. In this order, for every directed edge from node u to node v, u comes before v. Imagine it as scheduling tasks with dependencies - a task can't be started before its dependent tasks are completed. 
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Why Prepend?</a></p>
+      <div>
+      <p>Prepending ensures that nodes with no incoming edges (independent tasks) are placed at the end of the list, and dependent nodes are placed earlier. This creates a valid topological order where all dependencies are satisfied.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>16</h1>
+    <h2>16</h2>
+  </div>
+  <h1 class="heading">KMP Algorithm
+  </h1>
+  <p class="para">
+    The Knuth-Morris-Pratt (KMP) Algorithm efficiently finds occurrences of a pattern within a text by skipping unnecessary comparisons. It preprocesses the pattern to create a "failure function" that helps in determining where to restart the search upon mismatch. KMP is widely used in text processing tasks like search engines, DNA sequence analysis, and string matching in compilers.
+  </p>
+
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/">GeeksforGeeks</a> - Detailed explanation, code examples
+            <br>
+            <a href="https://visualgo.net/">Visualgo</a> - Interactive animation
+            <br>
+            The Coding Train: [invalid URL removed] (Engaging video explanation with clear visualizations)
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=cH-5KcgUcOE">YouTube</a>
+          </p>
+        </div>
+        
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Interactive Courses</a></p>
+      <div>
+        <p>Coursera: "Algorithms, Part 1" by Stanford University <br>edX: "Introduction to Algorithms" by MIT</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Union Find Algorithm Works</h2>
+        <p class="item"><a href="#">Core Principle</a></p>
+        <div>
+          <p>
+            The KMP Algorithm is a string searching algorithm that efficiently finds occurrences of a pattern string P within a longer text string T. It improves upon the naive search approach by utilizing information gained from partial matches to avoid redundant comparisons.          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">simplified explanation</a></p>
+      <div>
+      <p>KMP algorithm builds a prefix table storing the longest proper prefix which is also a suffix for each pattern index. During pattern matching, two pointers traverse the text and pattern. If characters match, both pointers advance; if a mismatch occurs, the pattern pointer is shifted back based on the prefix table. When the pattern pointer reaches the end, a match is found in the text at the corresponding index.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>17</h1>
+    <h2>17</h2>
+  </div>
+  <h1 class="heading">Insertion Sort Algorithm
+  </h1>
+  <p class="para">
+    Insertion Sort Algorithm is a simple sorting algorithm that builds the final sorted array one item at a time. It iterates through the input array, shifting elements as necessary to place each element in its correct position. Insertion Sort is efficient for small datasets or nearly sorted arrays, but less efficient than more advanced algorithms for larger datasets.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Breakdown</a></p>
+        <div>
+          <p>
+            Start with the second element: Consider the second element in the list as the first element of the sorted sub-list.<br>
+Iterate through the unsorted part:<br>
+Compare the current element with its previous element in the sorted sub-list.<br>
+If the current element is less than the previous element:<br>
+Shift the larger elements in the sorted sub-list one position up (to make space for the current element).<br>
+Insert the current element at its correct position in the sorted sub-list.<br>
+Repeat for all unsorted elements: Continue iterating through the list, comparing and potentially inserting each element into its correct position within the growing sorted sub-list.
+          </p>
+        </div>
+        
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Time Complexity</a></p>
+      <div>
+        <p>Average and Worst Case: O(n^2) - This is because in the worst case scenario (e.g., the list is already sorted in descending order), each element needs to be compared and potentially shifted, leading to a quadratic number of comparisons.<br>
+          Best Case: O(n) - If the list is already sorted in ascending order, only comparisons are needed, resulting in linear time complexity.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Pros & Cons</h2>
+        <p class="item"><a href="#">Advantages</a></p>
+        <div>
+          <p>
+            Simple to understand and implement.<br>
+            Efficient for small lists.<br>
+            Performs well for partially sorted data (already nearly in order).<br>
+            Uses minimal extra space (in-place sorting).  
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Disadvantages</a></p>
+      <div>
+      <p>Quadratic time complexity in the worst and average cases.<br>
+        Not suitable for very large datasets due to its inefficiency.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>18</h1>
+    <h2>18</h2>
+  </div>
+  <h1 class="heading">Selection Sort Algorithm
+  </h1>
+  <p class="para">
+    Selection Sort Algorithm sorts an array by repeatedly selecting the smallest element and swapping it with the current position. It iterates through the array, making n-1 passes to find the smallest element each time. Selection Sort has a time complexity of O(n^2) and is suitable for small datasets or when memory usage is a concern.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Breakdown</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Selection_sort">Wikipedia</a> - Formal definition and properties
+            <br>
+            <a href="https://www.geeksforgeeks.org/selection-sort/">GeeksforGeeks</a> - Detailed explanation, code examples
+            <br>
+            <a href="https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting">Khan Academy</a> - Interactive tutorial with visualization
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://www.youtube.com/watch?v=g-PGLbMth_g">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://www.youtube.com/watch?v=g-PGLbMth_g">YouTube</a>
+          </p>
+        </div>
+        
+        
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Time Complexity</a></p>
+      <div>
+        <p>Average and Worst Case: O(n^2) - Similar to Insertion Sort, Selection Sort requires quadratic comparisons in the worst case (e.g., descending order) and on average. Each element needs to be compared with others to find the minimum in each iteration.
+          <br>Best Case: O(n) - If the list is already sorted in ascending order, only comparisons are needed, resulting in linear time complexity.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Pros & Cons</h2>
+        <p class="item"><a href="#">Advantages</a></p>
+        <div>
+          <p>
+            Simple to understand and implement.<br>
+            Efficient for small lists.<br>
+            Performs well for partially sorted data (already nearly in order).<br>
+            Uses minimal extra space (in-place sorting).  
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Disadvantages</a></p>
+      <div>
+      <p>Quadratic time complexity in the worst and average cases.<br>
+        Not suitable for very large datasets due to its inefficiency.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>19</h1>
+    <h2>19</h2>
+  </div>
+  <h1 class="heading">Counting Sort Algorithm
+  </h1>
+  <p class="para">
+    Counting Sort Algorithm sorts an array by counting the frequency of each unique element and placing them in order. It requires prior knowledge of the range of elements and is suitable for sorting non-negative integers within a small range efficiently, with a time complexity of O(n + k), where k is the range of elements.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Breakdown</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Counting_sort">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://www.geeksforgeeks.org/problems/counting-sort/1">GeeksforGeeks</a> - Explanation with code examples
+            <br>
+            <a href="https://www.programiz.com/dsa/counting-sort">Programiz</a> - Detailed explanation with animation
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://m.youtube.com/watch?v=OKd534EWcdk">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=-Z-D_7g4EJo">YouTube</a>
+          </p>
+        </div>
+        
+        
+        
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Key Points</a></p>
+      <div>
+        <p>Counting Sort is a non-comparison based sorting algorithm, meaning it doesn't rely on element comparisons for sorting.<br>
+          It excels when the range of values is limited compared to the number of elements. This is because the size of the count_array is directly tied to the value range.<br>
+          Counting Sort has a time complexity of O(n + r), where n is the number of elements and r is the range of values. This makes it efficient for specific use cases.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How Counting Sort Works</h2>
+        <p class="item"><a href="#">Steps</a></p>
+        <div>
+          <p>
+            The algorithm starts by determining the largest element in the input list and then constructs a count array to store the frequency of each unique value. By iterating through the original list, it tallies the occurrences of each element in the count array. Subsequently, a prefix sum operation is applied to the count array to compute the sorted position of each element. In the final step, the algorithm traverses the original list in reverse order, utilizing the counts from the prefix sum to position each element in the output array, while ensuring duplicates are handled appropriately by decrementing the counts.
+          </p>
+        </div>
+        
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>20</h1>
+    <h2>20</h2>
+  </div>
+  <h1 class="heading">Heap Sort Algorithm
+  </h1>
+  <p class="para">
+    Heap Sort Algorithm sorts an array by first converting it into a max heap, ensuring the largest element is at the root. It repeatedly removes the largest element from the heap and places it at the end of the array until the heap is empty. Heap Sort is efficient with a time complexity of O(n log n) and is often used for sorting large datasets.
+  </p>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Breakdown</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Heapsort">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://www.geeksforgeeks.org/heap-sort/">GeeksforGeeks</a> - Explanation with code examples
+            <br>
+            <a href="https://www.programiz.com/dsa/heap-sort">Programiz</a> - Detailed explanation with animation
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://m.youtube.com/watch?v=2DmK_H7IdTo">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://www.youtube.com/watch?v=MtQL_ll5KhQ">YouTube</a>
+          </p>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Time Complexity</a></p>
+      <div>
+        <p>Average and Worst Case: O(n log n) - Heap Sort has a favorable time complexity, making it efficient for large datasets. Building the heap and repeated heapify operations contribute to the logarithmic factor.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Pros & Cons</h2>
+        <p class="item"><a href="#">Advantages</a></p>
+        <div>
+          <p>
+            Efficient for sorting large datasets due to its O(n log n) time complexity.<br>
+In-place sorting, meaning it sorts the data within the original array without requiring significant extra space.<br>
+Versatile - Can be modified for heap-based priority queues, useful for retrieving the element with the highest (or lowest) priority. 
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Disadvantages</a></p>
+      <div>
+      <p>Not as simple to understand or implement compared to some other sorting algorithms like Selection Sort or Insertion Sort.<br>
+        Overhead of maintaining the heap structure can be slightly higher compared to simpler sorting methods.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>21</h1>
+    <h2>21</h2>
+  </div>
+  <h1 class="heading">Kahn’s Topological Sort Algorithm
+  </h1>
+  <p class="para">
+    Kahn's Topological Sort Algorithm is a method for sorting the vertices of a directed graph in topological order. It works by repeatedly removing nodes with zero in-degree (no incoming edges) from the graph, adding them to the sorted list, and updating the in-degree of adjacent nodes accordingly. Kahn's algorithm is efficient with a time complexity of O(V + E) and is widely used in scheduling tasks with dependencies and job sequencing.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Breakdown</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Topological_sorting">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://practice.geeksforgeeks.org/problems/topological-sort/1">GeeksforGeeks</a> - Clear explanation, code examples
+            <br>
+            <a href="https://medium.com/nerd-for-tech/topological-sorting-for-interviews-f8213ef1c3bb">Interview Cake</a> - Focuses on intuition and applications
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://m.youtube.com/watch?v=eL-KzMXSXXI">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=GYmq98CVm2c">YouTube</a>
+          </p>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Time Complexity</a></p>
+      <div>
+        <p>O(V + E) - This represents linear time complexity in terms of the number of vertices (V) and edges (E) in the DAG. The in-degree calculation and queue operations contribute to this efficiency.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>22</h1>
+    <h2>22</h2>
+  </div>
+  <h1 class="heading">Huffman Coding Compression Algorithm
+  </h1>
+  <p class="para">
+    Huffman Coding Compression Algorithm is a data compression technique that assigns variable-length codes to input characters based on their frequencies. It constructs a binary tree where characters with higher frequencies have shorter codes, reducing the overall size of the encoded data. Huffman Coding is widely used in file compression applications such as ZIP files and multimedia compression.
+  </p>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Breakdown</a></p>
+        <div>
+          <p>
+            <a href="https://simple.wikipedia.org/wiki/Huffman_coding">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://www.geeksforgeeks.org/problems/huffman-encoding3345/1">GeeksforGeeks</a> - Explanation with code examples
+            <br>
+            <a href="https://www.programiz.com/dsa/huffman-coding">Programiz</a> - Detailed explanation with animation
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://m.youtube.com/watch?v=0kNXhFIEd_w">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=0kNXhFIEd_w">YouTube</a>
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Decompression</a></p>
+      <div>
+        <p>Decompressing Huffman-coded data requires the original Huffman tree or the code table derived from the tree. By following the assigned bits (0s and 1s) and traversing the tree based on the bits (left for 0, right for 1), the decompressing process can identify the original symbols and reconstruct the original data.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Pros & Cons</h2>
+        <p class="item"><a href="#">Advantages</a></p>
+        <div>
+          <p>
+            Efficiency: Huffman Coding is efficient for data with skewed symbol frequencies, where some characters appear much more often than others.<br>
+Lossless Compression: It preserves the original data perfectly, making it suitable for scenarios where data integrity is crucial.<br>
+Simplicity: The underlying concept and implementation are relatively straightforward compared to some other compression techniques. 
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Disadvantages</a></p>
+      <div>
+      <p>Variable Length Codes: The use of variable-length codes makes it slightly more complex to process compared to fixed-length coding schemes.<br>
+        Overhead: In some cases, additional information about the Huffman tree might need to be stored along with the compressed data, introducing some overhead.<br>
+        Limited to Statistical Redundancy: It primarily targets redundancy based on symbol frequencies, and may not be as effective for other types of data redundancy.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>23</h1>
+    <h2>23</h2>
+  </div>
+  <h1 class="heading">Quickselect Algorithm
+  </h1>
+  <p class="para">
+    Quickselect Algorithm is a selection algorithm used to find the kth smallest element in an unsorted array. It works similar to Quick Sort, partitioning the array around a pivot element and recursively searching in the partition containing the desired element until it's found. Quickselect has an average time complexity of O(n), making it efficient for finding order statistics in arrays.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Breakdown</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Quickselect">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://www.geeksforgeeks.org/quickselect-algorithm/">GeeksforGeeks</a> - Clear explanation with code examples
+            <br>
+            <a href="https://www.khanacademy.org/khan-for-educators/k4e-us-demo/xb78db74671c953a7:using-assignments-on-khan-academy/xb78db74671c953a7:strategies-for-using-assignments-with-students/a/using-khan-academy-s-activity-overview-report">Khan Academy</a> - Interactive explanation with visualizations
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://www.youtube.com/watch?v=aOhyCdxGJvY">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=SXXpkdruLfc">YouTube</a>
+          </p>
+        </div>
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Key Points</a></p>
+      <div>
+        <p>Quickselect is an in-place algorithm, meaning it modifies the original list.<br>
+          It has an average and worst-case time complexity of O(n), which is significantly better than selection-based algorithms like Selection Sort with O(n^2) complexity.<br>
+          The random selection of the pivot element helps achieve the average-case O(n) complexity by avoiding consistently bad pivots that might lead to imbalanced partitions.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Pros & Cons</h2>
+        <p class="item"><a href="#">Advantages</a></p>
+        <div>
+          <p>
+            Efficient for finding the kth smallest (or largest) element in an unsorted list.<br>
+Faster than selection-based algorithms on average due to O(n) time complexity.<br>
+Relatively simple to understand and implement.
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Disadvantages</a></p>
+      <div>
+      <p>Worst-case time complexity can be O(n^2) in situations with a consistently bad pivot choice.<br>
+        Not suitable for full list sorting (focuses on finding a specific element position).</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>24</h1>
+    <h2>24</h2>
+  </div>
+  <h1 class="heading">Boyer–Moore Majority Vote Algorithm
+  </h1>
+  <p class="para">
+    The Boyer-Moore Majority Vote Algorithm efficiently finds the majority element in an array. It iterates through the array, updating a candidate and count variables. This algorithm guarantees finding the majority element in linear time and constant space.
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Breakdown</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1">GeeksforGeeks</a> - Clear explanation with code examples
+            <br>
+            <a href="https://www.youtube.com/watch?v=vQCjJTFy20M">Programiz</a> - Explanation with animation
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://m.youtube.com/watch?v=gY-I8uQrCkk">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://m.youtube.com/watch?v=4Xyhb72LCX4">YouTube</a>
+          </p>
+        </div>
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Time Complexity</a></p>
+      <div>
+        <p>O(n) - The algorithm iterates through the list only once in the worst case.</p>
+      </div>
+    </li>
+    <li>
+      <p class="item"><a href="#">Space Complexity</a></p>
+      <div>
+        <p>O(1) - It uses constant extra space for the candidate and count variables.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Pros & Cons</h2>
+        <p class="item"><a href="#">Advantages</a></p>
+        <div>
+          <p>
+            Efficient linear time complexity (O(n)).<br>
+Low space complexity (O(1)), making it memory-efficient.<br>
+Simple to understand and implement.
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Disadvantages</a></p>
+      <div>
+      <p>Only works for finding the majority element (assuming it exists).<br>
+        Doesn't provide information about the frequency of the majority element or other elements.<br>
+        The verification pass might be needed to confirm the majority, adding a slight overhead.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+  <!--=============================================== Algorithm =================================================-->
+
+  <div class="name">
+    <h1>25</h1>
+    <h2>25</h2>
+  </div>
+  <h1 class="heading">Euclid’s Algorithm
+  </h1>
+  <p class="para">
+    Euclid's Algorithm is a method for finding the greatest common divisor (GCD) of two integers. It works by repeatedly applying the property that the GCD of two numbers is the same as the GCD of the smaller number and the difference between the two numbers. This process continues until one of the numbers becomes zero, at which point the other number is the GCD. Euclid's Algorithm is efficient with a time complexity of O(log min(a, b)).
+  </p>
+
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>Where to Learn</h2>
+        <p class="item"><a href="#">Online Resources</a></p>
+        <div>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Euclidean_algorithm">Wikipedia</a> - Detailed explanation and properties
+            <br>
+            <a href="https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-expressions-and-variables/cc-6th-gcf/v/greatest-common-divisor">Khan Academy</a> - Step-by-step explanation with video
+            <br>
+            <a href="https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/">GeeksforGeeks</a> - Explanation with code examples
+            <br>
+            The Coding Train: (Engaging video explanation with clear visualizations) <a href="https://www.youtube.com/watch?v=iBfL10J2SW4">YouTube</a>
+            <br>
+            freeCodeCamp.org: (Concise and practical explanation) <a href="https://www.youtube.com/watch?v=JUzYl1TYMcU">YouTube</a>
+          </p>
+        </div>
+
+        
+        
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Time Complexity</a></p>
+      <div>
+        <p>Euclid's Algorithm has a time complexity of O(log min(a, b)), where min(a, b) represents the smaller of the two input integers. This makes it efficient for finding the GCD of large numbers.</p>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  <div class="cat">
+    <ul class="accordion">
+    <li>
+      <h2>How it works</h2>
+        <p class="item"><a href="#">Applications</a></p>
+        <div>
+          <p>
+            Euclid's Algorithm has various applications in cryptography, number theory, and other areas of mathematics.<br>
+It is used in algorithms like the Extended Euclidean Algorithm for finding the modular inverse of a number.
+          </p>
+        </div>
+        
+    </li>
+    <li>
+      <p class="item"><a href="#">Why it Works</a></p>
+      <div>
+      <p>The key idea is that the GCD of two numbers also divides their difference. For example, if the GCD of 210 and 45 is 15, then 15 must also divide 210 - 45 (which is 165). By repeatedly replacing the larger number with its difference from the smaller number, we eventually reach a point where the larger number becomes a multiple of the smaller number. The remainder at that point becomes the GCD.</p>  
+      </div>
+    </li>
+  </ul>
+
+  </div>
+
+
+
+
+<br><br><br><br>
+<footer class="copyright">
+    <p>&copy; 2024 Utsav Jhakhariya. All rights reserved.</p>
+</footer>
+
+</div>
+<br>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+  var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+  var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+
+document.addEventListener('mousemove', function(e) {
+  var cursor = document.getElementById('cursor');
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+
+        $('.buy').click(function()
+{
+    $('.bottom').addClass("clicked");
+});
+$('.remove').click(function()
+{
+    $('.bottom').removeClass("clicked");
+}); 
+jQuery( document ).ready(function( $ ) 
+{
+    if ( jQuery( '.accordion' )[0] )
+    {
+        jQuery( '.accordion' ).find( '.item' ).click( function( e )
+        { 
+            e.preventDefault();		
+            jQuery( this ).next().slideToggle( 'fast' ).css( 'zoom', '1' );
+            jQuery(".accordion > li > div").not($(this).next()).slideUp( 'fast' ).css( 'zoom', '1' );
+            jQuery( this ).parent( 'li' ).toggleClass( 'collapse' );
+        });
+        jQuery( '.accordion > li' ).each( function( $ )
+        {
+            if ( !jQuery( this ).hasClass( 'extended' ) )
+            {
+                jQuery( this ).find( 'div' ).slideUp( 'fast' ).css( 'zoom', '1' ); 
+            }
+        });
+    }
+});
+
+    </script>
+</body>
+</html>
