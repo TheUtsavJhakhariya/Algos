@@ -5,286 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-html, body {
-    background: #000000;
-    font-family: 'Poppins', sans-serif;
-}
-
-#cursor {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  position: fixed; /* Change position to fixed */
-  pointer-events: none;
-  mix-blend-mode: difference;
-  background-color: #fff;
-  z-index: 1000;
-}
-
-
-.content h1{
-  text-align: center;
-  color: #006aff;
-  font-size: 3em;
-  width: 100%;
-  font-weight: 500;
-}
-.content{
-  width: 80%;
-  margin: 5%;
-}
-.content .cat{
-  width: 100%;
-  padding-bottom: 1em;
-}
-.content ul li{
-  list-style: none;
-}
-.content h2{
-  line-height: 15px;
-  font-weight: 900;
-  color: rgb(255, 255, 255);
-}
-.content p{
-  color: rgb(255, 255, 255);
-  margin-left: 100px;
-  font-size: 25px;
-  font-weight: 200;
-}
-.content .item{
-  line-height: 5px;
-}
-.content .item a{
-  color: #777777;
-  text-decoration: none;
-  text-align: left;
-  font-weight: 700;
-}
-.content .item a:hover{
-  color: #bbbbbb;
-  transform: scale(1.1);
-  text-decoration: none;
-  text-align: left;
-  font-weight: 700;
-}
-h1{
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin: 20vh;
-    max-width: 80%;
-    font-style: italic;
-    font-size: 50px;
-}
-
-.heading{
-  font-size: 4.5rem;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  color: rgb(255, 255, 255);
-}
-
-.para{
-  font-size: 2rem;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  text-align: center;
-  color: rgb(255, 255, 255);
-}
-
-.accordion li h2 {
-    margin-left: 20%;
-    color: rgb(255, 255, 255);
-  }
-
-  .accordion li p{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    margin-left: 25%;
-  }
-
-@media only screen and (max-width: 1024px) {
-  .content {
-    max-width: 100%;
-  }
-
-  h1{
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 40px;
-    margin: 20px;
-    max-width: 90%;
-  }
-
-  .content h1{
-    font-size: 40px;
-    color: #006aff;
-  }
-
-  .content p {
-    font-size: 25px;
-    margin-left: 10px;
-    color: rgb(255, 255, 255);
-  }
-
-  .content .cat {
-    font-size: 1.1rem;
-    margin-top: 20px;
-  }
-
-  .accordion li h2 {
-    font-size: 15px;
-    margin-left: 20px;
-    color: rgb(255, 255, 255);
-  }
-
-  .accordion li p{
-    color: rgb(255, 255, 255);
-    font-size: 17px;
-    margin-left: 30px;
-  }
-  .copyright{
-    font-size: 10px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .content {
-    max-width: 100%;
-  }
-
-  h1{
-    color: white;
-    text-align: center;
-    margin: 20px;
-    max-width: 90%;
-
-  }
-
-  .content h1{
-    font-size: 30px;
-    color: #006aff;
-  }
-
-  .content p {
-    font-size: 15px;
-    margin-left: 10px;
-    color: white;
-  }
-
-  .content .cat {
-    font-size: 1.1rem;
-    margin-top: -20px;
-  }
-
-  .accordion li h2 {
-    font-size: 15px;
-    margin-left: -40px;
-    color: white;
-  }
-
-  .accordion li p{
-    color: white;
-    margin: 10px;
-  }
-}
-
-/* Mobile Screens (portrait) */
-@media only screen and (max-width: 480px) {
-  .content {
-    max-width: 100%;
-  }
-
-  h1{
-    color: white;
-    text-align: center;
-    margin: 20px;
-    max-width: 90%;
-
-  }
-
-  .content h1{
-    font-size: 30px;
-    color: #006aff;
-  }
-
-  .content p {
-    font-size: 15px;
-    margin-left: 10px;
-    color: white;
-  }
-
-  .content .cat {
-    font-size: 1.1rem;
-    margin-top: -20px;
-  }
-
-  .accordion li h2 {
-    font-size: 15px;
-    margin-left: -40px;
-    color: white;
-  }
-
-  .accordion li p{
-    color: white;
-    margin: 10px;
-  }
-
-}
-
-.copyright {
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.name h1{
-  color: #ffffff50;
-  font-size: 150px;
-  font-weight: 200;
-  margin-bottom: -50px;
-  text-align: center;
-}
-
-.name h2{
-  color: #ffffff;
-  font-size: 50px;
-  margin-left: 50px;
-  text-decoration:wavy;
-  margin-top: -100px;
-  text-align: center;
-}
-
-/* Styles for the progress bar */
-.progress-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #000000;
-  z-index: 9999; /* Ensure it stays on top of other elements */
-}
-
-.progress-bar {
-  height: 4px;
-  background: linear-gradient(to right, black, rgb(0, 102, 255));
-}
-
-
-    </style>
-    <title>Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Algorithms Programmer Should Know</title>
     
 </head>
 <body>
     <div id="cursor"></div>
-<br>
-<h1>Algorithms That Programmers Should Know</h1>
-<div class="progress-container">
-  <div class="progress-bar" id="myBar"></div>
-</div>
+    <br>
+    <h1>Algorithms Programmer Should Know</h1>
+
+    <div class="content"></div>
+    <p class="para1">
+        Welcome to "Algorithms Programmer Should Know"! Explore 25 essential algorithms crucial for mastering computer science and programming. Each algorithm is accompanied by a simple explanation and live URLs to resources and more for in-depth learning. Enhance your coding skills and problem-solving abilities with this comprehensive resource.</p></div>
+    <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+    </div>
 
 <div class="content">
+
+
+
+  
+  <!--=============================================== Algorithm =================================================-->
 
   <div class="name">
     <h1>01</h1>
@@ -340,7 +82,7 @@ h1{
 
   </div>
 
-
+  <!--=============================================== Algorithm =================================================-->
 
   <div class="name">
     <h1>02</h1>
@@ -398,7 +140,7 @@ h1{
 
   </div>
 
-
+  <!--=============================================== Algorithm =================================================-->
 
 
   <div class="name">
@@ -462,14 +204,12 @@ h1{
   
     </div>
 
-
+  <!--=============================================== Algorithm =================================================-->
 
   <div class="name">
     <h1>04</h1>
     <h2>04</h2>
   </div>
-
-
   <h1 class="heading">Merge Sort Algorithm</h1>
   <p class="para">
     Merge Sort is a divide-and-conquer algorithm that divides the unsorted list into sublists until each sublist contains only one element. It then repeatedly merges sublists to produce sorted sublists until there is only one sublist remaining. Merge Sort guarantees a time complexity of O(n log n), making it efficient for sorting large datasets.</p>
@@ -527,14 +267,12 @@ h1{
   
     </div>
 
-
+  <!--=============================================== Algorithm =================================================-->
 
   <div class="name">
     <h1>05</h1>
     <h2>05</h2>
   </div>
-
-
   <h1 class="heading">Quicksort Algorithm
   </h1>
   <p class="para">
@@ -595,13 +333,12 @@ h1{
 
   </div>
 
+  <!--=============================================== Algorithm =================================================-->
 
   <div class="name">
     <h1>06</h1>
     <h2>06</h2>
   </div>
-
-
   <h1 class="heading">Kruskals Algorithm
   </h1>
   <p class="para">
@@ -656,13 +393,12 @@ h1{
 
   </div>
 
+  <!--=============================================== Algorithm =================================================-->
 
   <div class="name">
     <h1>07</h1>
     <h2>07</h2>
   </div>
-
-
   <h1 class="heading">Floyd Warshall Algorithm
   </h1>
   <p class="para">
@@ -713,13 +449,13 @@ h1{
   </ul>
 
   </div>
- 
+
+  <!--=============================================== Algorithm =================================================-->
 
   <div class="name">
     <h1>08</h1>
     <h2>08</h2>
   </div>
-
 
   <h1 class="heading">Dijkstra’s Algorithm
   </h1>
@@ -777,9 +513,7 @@ h1{
 
   </div>
 
-
-
-
+  <!--=============================================== Algorithm =================================================-->
   
   <div class="name">
     <h1>09</h1>
@@ -843,9 +577,7 @@ h1{
 
   </div>
 
-
-
-
+  <!--=============================================== Algorithm =================================================-->
 
 <div class="name">
   <h1>10</h1>
@@ -1896,7 +1628,7 @@ It is used in algorithms like the Extended Euclidean Algorithm for finding the m
 
 <br><br><br><br>
 <footer class="copyright">
-    <p>&copy; 2024 Utsav Jhakhariya. All rights reserved.</p>
+    <p>&copy; 2024 AlgorithmsProgrammerShouldKnow. Created by Utsav Jhakhariya.</p>
 </footer>
 
 </div>
@@ -1904,56 +1636,6 @@ It is used in algorithms like the Extended Euclidean Algorithm for finding the m
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-  var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-  var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-
-
-
-document.addEventListener('mousemove', function(e) {
-  var cursor = document.getElementById('cursor');
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-});
-
-
-        $('.buy').click(function()
-{
-    $('.bottom').addClass("clicked");
-});
-$('.remove').click(function()
-{
-    $('.bottom').removeClass("clicked");
-}); 
-jQuery( document ).ready(function( $ ) 
-{
-    if ( jQuery( '.accordion' )[0] )
-    {
-        jQuery( '.accordion' ).find( '.item' ).click( function( e )
-        { 
-            e.preventDefault();		
-            jQuery( this ).next().slideToggle( 'fast' ).css( 'zoom', '1' );
-            jQuery(".accordion > li > div").not($(this).next()).slideUp( 'fast' ).css( 'zoom', '1' );
-            jQuery( this ).parent( 'li' ).toggleClass( 'collapse' );
-        });
-        jQuery( '.accordion > li' ).each( function( $ )
-        {
-            if ( !jQuery( this ).hasClass( 'extended' ) )
-            {
-                jQuery( this ).find( 'div' ).slideUp( 'fast' ).css( 'zoom', '1' ); 
-            }
-        });
-    }
-});
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
