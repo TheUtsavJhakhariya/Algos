@@ -27,7 +27,7 @@ $('.remove').click(function()
     $('.bottom').removeClass("clicked");
 }); 
 jQuery( document ).ready(function( $ ) 
-{
+{ 
     if ( jQuery( '.accordion' )[0] )
     {
         jQuery( '.accordion' ).find( '.item' ).click( function( e )
