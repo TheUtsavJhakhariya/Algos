@@ -8,7 +8,6 @@ function scrollFunction() {
   var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
   document.getElementById("myBar").style.width = scrolled + "%"; 
 }
- 
 
 
 document.addEventListener('mousemove', function(e) { 
