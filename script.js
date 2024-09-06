@@ -17,7 +17,7 @@ document.addEventListener('mousemove', function(e) {
 
         $('.buy').click(function()
 {
-    $('.bottom').addClass("clicked");
+    $('.bottom').addClass("clicked"); 
 });
 $('.remove').click(function()
 {
